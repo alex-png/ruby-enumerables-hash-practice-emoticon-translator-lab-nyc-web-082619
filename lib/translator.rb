@@ -1,4 +1,5 @@
 require "yaml"
+<<<<<<< HEAD
 
 
 def load_library(yam)
@@ -13,7 +14,20 @@ def load_library(yam)
    end
   hash
 
+=======
+
+
+def load_library(yam)
+  list = YAML.load_file(yam)
+  hash = {:get_meaning =>{}, :get_emoticon =>{}}
+ 
+   list.keys.each do |expression|
+      puts list[expression][1]
+   end
+  print hash 
+>>>>>>> 1cca5e0cc35a823aa2bc1092d1cbd9a39467b1a6
 end
+load_library("./lib/emoticons.yml")
 
 def get_japanese_emoticon(yam, emo)
   
